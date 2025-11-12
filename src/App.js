@@ -7,6 +7,7 @@ import ReturnPolicy from "./Pages/ReturnPolicy/ReturnPolicy";
 import ProductDetails from "./Pages/ProductDetailPage/ProductDetailPage";
 import { CartProvider } from "./Context/CartContext";
 import CartPage from "./Pages/CartPage";
+import Checkout from "./Pages/CheckOut";
 
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
     <Route path="/return-policy" element={<ReturnPolicy/>} />
     <Route path="/product/:id" element={<ProductDetails />} />
     <Route path="/cart" element={<CartPage />} />
+    <Route path="/checkout" element={<Checkout />} />
+
 
 
 

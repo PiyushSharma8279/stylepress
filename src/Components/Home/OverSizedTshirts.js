@@ -62,6 +62,8 @@ export default function OverSizedTshirts() {
     navigate(`/product/${product.id}`, { state: product });
   };
 
+
+  
   return (
     <section className="py-20 bg-[#f8f8f8] text-center">
       <h2 className="text-4xl md:text-5xl font-bold text-black">OverSized Tshirts</h2>
@@ -82,13 +84,22 @@ export default function OverSizedTshirts() {
                 Sale
               </div>
             )}
-            <div className="overflow-hidden">
-              <img
-                src={product.image}
-                alt={product.name}
-                className="w-full h-[400px] object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-            </div>
+            <div className="relative overflow-hidden">
+                          <img
+                            src={product.image}
+                            alt={product.name}
+                            className="w-full h-[400px] object-cover transition-transform duration-500 group-hover:scale-110"
+                          />
+            
+                          {/* Overlay on Hover */}
+                          <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100">
+                            <div className="flex space-x-4 bg-white py-3 px-6 rounded-full shadow-lg">
+                              <FaEye className="text-xl text-black cursor-pointer hover:scale-110 transition-transform" />
+                              <FaHeart className="text-xl text-black cursor-pointer hover:scale-110 transition-transform" />
+                              <FaShoppingCart className="text-xl text-black cursor-pointer hover:scale-110 transition-transform" />
+                            </div>
+                          </div>
+                        </div>
             <div className="p-5">
               <h3 className="text-lg font-semibold text-gray-900 mb-2">{product.name}</h3>
               <div className="flex justify-center items-center space-x-3">

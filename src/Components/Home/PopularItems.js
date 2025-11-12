@@ -17,7 +17,7 @@ const products = [
     image:
       "https://hyperon.qodeinteractive.com/wp-content/uploads/2018/02/mainhome-shopitem-img4.png",
     sale: true,
-     price: 699,
+    price: 699,
     oldPrice: 799,
   },
   {
@@ -25,7 +25,7 @@ const products = [
     name: "Skater Snoopy",
     image:
       "https://hyperon.qodeinteractive.com/wp-content/uploads/2018/02/mainhome-shopitem-img2.png",
-     price: 699,
+    price: 699,
     oldPrice: 799,
   },
   {
@@ -33,7 +33,7 @@ const products = [
     name: "Minimal Black Tee",
     image:
       "https://hyperon.qodeinteractive.com/wp-content/uploads/2018/02/mainhome-shopitem-img1.png",
-   price: 699,
+    price: 699,
     oldPrice: 799,
   },
   {
@@ -58,7 +58,7 @@ const products = [
 export default function PopularItems() {
   const navigate = useNavigate();
 
-     const handleClick = (product) => {
+  const handleClick = (product) => {
     navigate(`/product/${product.id}`, { state: product });
   };
   return (

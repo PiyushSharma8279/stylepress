@@ -53,7 +53,10 @@ export default function CartPage() {
             >
               Clear Cart
             </button>
-            <button className="bg-black text-white px-6 py-2 rounded-md hover:bg-gray-800 transition">
+            <button className="bg-black text-white px-6 py-2 rounded-md hover:bg-gray-800 transition"
+            
+            
+            >
               Checkout
             </button>
           </div>
