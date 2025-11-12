@@ -4,6 +4,7 @@ import { useLocation } from "react-router-dom";
 import Header from "../Components/Header/Header";
 import Footer from "../Components/Footer/Footer";
 
+
 export default function Checkout() {
   const { state: product } = useLocation();
   const [form, setForm] = useState({
@@ -25,6 +26,11 @@ export default function Checkout() {
     }
     alert("✅ Order placed successfully!");
   };
+
+  
+
+const { state } = useLocation();
+const { items = [], total = 0 } = state || {};
 
   return (
     <>
