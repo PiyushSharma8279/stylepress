@@ -5,11 +5,14 @@ import RegularTshirtsPage from "./Pages/RegularTshirtsPage/RegularTshirtsPage";
 import ContactPage from "./Pages/Contact/Contact";
 import ReturnPolicy from "./Pages/ReturnPolicy/ReturnPolicy";
 import ProductDetails from "./Pages/ProductDetailPage/ProductDetailPage";
+import { CartProvider } from "./Context/CartContext";
+import CartPage from "./Pages/CartPage";
 
 function App() {
   return (
    <>
   <BrowserRouter>
+  <CartProvider>
   <Routes>
     <Route path="/" element={<HomePages/>} />
     <Route path="/oversized-tshirts" element={<OverSizedTshirtsPage/>} />
@@ -17,6 +20,7 @@ function App() {
     <Route path="/contact-us" element={<ContactPage/>} />
     <Route path="/return-policy" element={<ReturnPolicy/>} />
     <Route path="/product/:id" element={<ProductDetails />} />
+    <Route path="/cart" element={<CartPage />} />
 
 
 
@@ -24,6 +28,7 @@ function App() {
   
 
   </Routes>
+  </CartProvider>
   
   </BrowserRouter>
    
