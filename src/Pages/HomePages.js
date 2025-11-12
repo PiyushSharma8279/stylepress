@@ -7,6 +7,7 @@ import Testimonials from '../Components/Home/Testimonial'
 import Newsletter from '../Components/Home/NewsLetter'
 import TrendingItems from '../Components/Home/TrendingItems'
 import OverSizedTshirts from '../Components/Home/OverSizedTshirts'
+import Footer from "../Components/Footer/Footer";
 
 function HomePages() {
      useEffect(() => {
@@ -23,6 +24,7 @@ function HomePages() {
         <SingleProduct/>
         <Testimonials/>
         <Newsletter/>
+        <Footer/>
         </>
     )
 }

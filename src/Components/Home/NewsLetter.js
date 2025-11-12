@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Newsletter() {
   return (
-    <section className="py-20 bg-black text-white text-center relative overflow-hidden">
+    <section className="py-20 bg-gray-500 text-white text-center relative overflow-hidden">
       {/* Decorative circles */}
       <div className="absolute top-0 left-0 w-48 h-48 bg-white/10 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>

@@ -1,5 +1,6 @@
 import React from "react";
 import { FaHeart, FaShoppingCart, FaEye } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const products = [
   {
@@ -55,6 +56,11 @@ const products = [
 ];
 
 export default function PopularItems() {
+  const navigate = useNavigate();
+
+     const handleClick = (product) => {
+    navigate(`/product/${product.id}`, { state: product });
+  };
   return (
     <section className="py-20 bg-[#f8f8f8] text-center">
       {/* Section Title */}
@@ -66,11 +72,12 @@ export default function PopularItems() {
       </p>
 
       {/* Product Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 px-6 md:px-20">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 px-6 md:px-20 cursor-pointer">
         {products.map((product) => (
           <div
             key={product.id}
             className="group bg-white shadow-sm overflow-hidden transition-all duration-300 hover:shadow-lg"
+            onClick={() => handleClick(product)}
           >
             {/* Sale Badge */}
             {product.sale && (

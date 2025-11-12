@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import Header from "../../Components/Header/Header";
+import Footer from "../../Components/Footer/Footer";
 
 export default function ContactPage() {
   useEffect(() => {
@@ -95,6 +96,7 @@ export default function ContactPage() {
           loading="lazy"
         ></iframe>
       </section>
+      <Footer/>
     </>
   );
 }
